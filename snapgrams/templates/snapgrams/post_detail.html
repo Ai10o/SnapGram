@@ -1,6 +1,7 @@
 {% extends 'snapgrams/base.html' %}
 
 {% block content %}
+
 <div class="container">
     <div class="row">
 
@@ -12,7 +13,6 @@
             <p>{{ post.text }}</p>
         </div>
 
-
         <div class="col-md-4">
             <h2>Comments</h2>
             <div class="comments">
@@ -21,7 +21,6 @@
                         <p><strong>{{ comment.author.username }}</strong> said:</p>
                         <p>{{ comment.text }}</p>
                         <p class="text-muted">{{ comment.created_date }}</p>
-
                         {% if comment.author == user %}
                             <form method="post" action="{% url 'delete_comment' comment.id %}">
                                 {% csrf_token %}
