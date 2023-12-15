@@ -1,5 +1,6 @@
 ﻿asgiref==3.7.2
 Django==4.2.6
+# SQLite version 3.8.3 or higher is required
 Pillow==10.1.0
 sqlparse==0.4.4
 tzdata==2023.3
