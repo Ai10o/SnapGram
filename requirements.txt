@@ -1,5 +1,5 @@
 ﻿asgiref==3.7.2
-Django==3.2
+Django==3.1
 Pillow==10.1.0
 sqlparse==0.4.4
 tzdata==2023.3
