@@ -23,7 +23,7 @@ def create_post(request):
             return redirect('home')
     else:
         form = PhotoPostForm()
-    return render(request, 'snapgrams/create_post.html', {'form': form})
+    return render(request, 'snapgrams/upload_photo.html', {'form': form})
 
 @login_required
 def edit_post(request, post_id):
