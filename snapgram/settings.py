@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +25,7 @@ SECRET_KEY = 'django-insecure-c2(ri!+@e!1r*99=w1%r!maq2sa5oi&ho=_c!cta=+%w)#lgof
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.snap-gram-six.vercel.app', '.snap-gram-902q9zlqp-ai10os-projects.vercel.app', '.vercel.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -76,7 +75,10 @@ WSGI_APPLICATION = 'snapgram.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://USER:PASSWORD@HOST:PORT/DB_NAME')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 
